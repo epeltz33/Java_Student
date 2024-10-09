@@ -8,11 +8,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ClassRoster {
-    private static final List<Student> roster = new ArrayList<>();
+    private static final List<Student> roster = new ArrayList<>(); // List of students in the class
+
 
     public static void main(String[] args) {
-        initializeRoster();
-        runUserInterface();
+        initializeRoster(); // method to initialize the roster
+        runUserInterface(); // method to run the user interface
     }
 
     private static void initializeRoster() {
@@ -67,9 +68,9 @@ public class ClassRoster {
     }
 
     private static void displayRandomOrder() { // Display the roster in random order
-        List<Student> shuffledRoster = new ArrayList<>(roster);
-        Collections.shuffle(shuffledRoster); // using collections to shuffle the list
-        displayRoster(shuffledRoster);
+        List<Student> shuffledRoster = new ArrayList<>(roster); // creating a new list to store the shuffled roster
+        Collections.shuffle(shuffledRoster); // shuffling the roster
+        displayRoster(shuffledRoster); // displaying the shuffled roster
     }
 
     private static void displaySortedByCredits() { // Display the roster in sorted order
